@@ -1,0 +1,42 @@
+{
+  "minimal": {
+    "inputDir": "cypress/temp/test",
+    "outputDir": "cypress/temp/test/output",
+    "baseUrl": "/output"
+  },
+  "full_features": {
+    "inputDir": "cypress/temp/test",
+    "outputDir": "cypress/temp/test/output",
+    "baseUrl": "/output",
+    "defaultTheme": "dark",
+    "generateBothThemes": false,
+    "includeSourceCode": true,
+    "sourceCodeStyle": "details",
+    "backgroundColor": "transparent",
+    "concurrent": 3,
+    "skipExisting": false,
+    "verbose": true
+  },
+  "production": {
+    "inputDir": "cypress/temp/test",
+    "outputDir": "cypress/temp/test/output",
+    "baseUrl": "/output",
+    "defaultTheme": "neutral",
+    "generateBothThemes": true,
+    "includeSourceCode": false,
+    "sourceCodeStyle": "none",
+    "concurrent": 5,
+    "skipExisting": true,
+    "verbose": false
+  },
+  "development": {
+    "inputDir": "cypress/temp/test",
+    "outputDir": "cypress/temp/test/output",
+    "baseUrl": "/output",
+    "defaultTheme": "light",
+    "includeSourceCode": true,
+    "sourceCodeStyle": "inline",
+    "concurrent": 1,
+    "verbose": true
+  }
+}

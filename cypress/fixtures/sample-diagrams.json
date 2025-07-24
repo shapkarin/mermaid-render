@@ -1,0 +1,27 @@
+{
+  "flowchart": {
+    "simple": "graph TD\n    A[Start] --> B[Process]\n    B --> C[End]",
+    "complex": "graph TD\n    A[Start] --> B{Decision}\n    B -->|Yes| C[Action 1]\n    B -->|No| D[Action 2]\n    C --> E[End]\n    D --> E",
+    "with_styling": "graph TD\n    A[Start] --> B[Process]\n    B --> C[End]\n    classDef startClass fill:#9f6,stroke:#333,stroke-width:2px\n    class A startClass"
+  },
+  "sequence": {
+    "simple": "sequenceDiagram\n    Alice->>Bob: Hello Bob, how are you?\n    Bob-->>Alice: Great!",
+    "complex": "sequenceDiagram\n    participant A as Alice\n    participant B as Bob\n    participant C as Charlie\n    A->>B: Hello Bob\n    B->>C: Hello Charlie\n    C-->>B: Hi Bob\n    B-->>A: Hi Alice"
+  },
+  "pie": {
+    "simple": "pie title Pets adopted by volunteers\n    \"Dogs\" : 386\n    \"Cats\" : 85\n    \"Rats\" : 15",
+    "complex": "pie title NETFLIX\n    \"Time spent looking for movie\" : 90\n    \"Time spent watching it\" : 10"
+  },
+  "class": {
+    "simple": "classDiagram\n    class Animal\n    Animal : +int age\n    Animal : +String gender\n    Animal: +isMammal()\n    Animal: +mate()",
+    "complex": "classDiagram\n    Animal <|-- Duck\n    Animal <|-- Fish\n    Animal <|-- Zebra\n    Animal : +int age\n    Animal : +String gender\n    Animal: +isMammal()\n    Animal: +mate()\n    class Duck{\n        +String beakColor\n        +swim()\n        +quack()\n    }"
+  },
+  "state": {
+    "simple": "stateDiagram-v2\n    [*] --> Still\n    Still --> [*]\n    Still --> Moving\n    Moving --> Still\n    Moving --> Crash\n    Crash --> [*]",
+    "complex": "stateDiagram-v2\n    [*] --> First\n    state First {\n        [*] --> second\n        second --> [*]\n    }\n    First --> Second\n    Second --> [*]"
+  },
+  "gantt": {
+    "simple": "gantt\n    title A Gantt Diagram\n    dateFormat  YYYY-MM-DD\n    section Section\n    A task           :a1, 2014-01-01, 30d\n    Another task     :after a1  , 20d",
+    "complex": "gantt\n    dateFormat  YYYY-MM-DD\n    title       Adding GANTT diagram functionality to mermaid\n    excludes    weekends\n    section A section\n    Completed task            :done,    des1, 2014-01-06,2014-01-08\n    Active task               :active,  des2, 2014-01-09, 3d\n    Future task               :         des3, after des2, 5d\n    Future task2              :         des4, after des3, 5d"
+  }
+}
